@@ -10,9 +10,9 @@ dictFile = os.path.dirname(os.path.realpath(__file__))+"/dict.txt"
 checkerList = []
 
 print("#"*70)
-print("# Indonesian Kata Baku Checker" + " "*39 + "#")
-print("# Author   : Turfa Auliarachman" + " "*38 + "#")
-print("# Date     : October 23, 2016" + " "*40 + "#")
+print("# Indonesian Kata Baku Checker for PO File" + " "*27 + "#")
+print("# Author   : Bervianto Leo Pratama" + " "*35 + "#")
+print("# Date     : December 12, 2018" + " "*39 + "#")
 print("#"*70)
 print()
 
@@ -48,7 +48,7 @@ else:
                     print("Message       : {}".format(err.message))
                     print()
         else:
-            
+
             type = args.type
             if (type == 'po'):
                 po = polib.pofile(args.input)
@@ -61,7 +61,7 @@ else:
                         print("Checker       : {}".format(err.checkerDescription))
                         print("Original text : {}".format(err.original))
                         print("Message       : {}".format(err.message))
-                        print()		
+                        print()
             else:
                 for i in range(0, len(f)):
                     errList = []
@@ -75,5 +75,3 @@ else:
                         print("Original text : {}".format(err.original))
                         print("Message       : {}".format(err.message))
                         print()
-				
-					
