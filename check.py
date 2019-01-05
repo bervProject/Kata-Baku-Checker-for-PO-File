@@ -23,7 +23,27 @@ parser.add_argument('-i', '--input')
 
 args = parser.parse_args()
 
-if (len(sys.argv)<2):
+
+def usual_read(f):
+    for i in range(0, len(f)):
+        errList = []
+        if (f[i][len(f[i])-1] == "\n"):
+            f[i] = f[i][:-1]
+
+        for checker in checkerList:
+            errList += checker.check(f[i])
+
+        for err in errList:
+            print("Checker       : {}".format(err.checkerDescription))
+            print("Line          : {}".format(i+1))
+            print("Original text : {}".format(err.original))
+            print("Message       : {}".format(err.message))
+            print()
+        
+        print("Total Error: {}".format(len(errList)))
+
+
+if (len(sys.argv) < 2):
     print("Usage:")
     print("{} <path-to-file>".format(sys.argv[0]))
 else:
@@ -32,46 +52,22 @@ else:
         print("File {} not found.".format(args.input))
     else:
         f = open(args.input).readlines()
-        if (len(sys.argv)==2):
-            for i in range(0, len(f)):
-                errList = []
-                if (f[i][len(f[i])-1]=="\n"):
-                    f[i] = f[i][:-1]
-
-                for checker in checkerList:
-                    errList += checker.check(f[i])
-
-                for err in errList:
-                    print("Checker       : {}".format(err.checkerDescription))
-                    print("Line          : {}".format(i+1))
-                    print("Original text : {}".format(err.original))
-                    print("Message       : {}".format(err.message))
-                    print()
+        if (len(sys.argv) == 2):
+            usual_read(f)
         else:
-
             type = args.type
             if (type == 'po'):
                 po = polib.pofile(args.input)
+                errList = []
                 for entry in po:
-                    errList = []
                     for checker in checkerList:
                         errList += checker.check(entry.msgstr)
 
-                    for err in errList:
-                        print("Checker       : {}".format(err.checkerDescription))
-                        print("Original text : {}".format(err.original))
-                        print("Message       : {}".format(err.message))
-                        print()
+                for err in errList:
+                    print("Checker       : {}".format(err.checkerDescription))
+                    print("Original text : {}".format(err.original))
+                    print("Message       : {}".format(err.message))
+                    print()
+                print("Total Error: {}".format(len(errList))) 
             else:
-                for i in range(0, len(f)):
-                    errList = []
-                    if (f[i][len(f[i])-1]=="\n"):
-                        f[i] = f[i][:-1]
-                    for checker in checkerList:
-                        errList += checker.check(f[i])
-                    for err in errList:
-                        print("Checker       : {}".format(err.checkerDescription))
-                        print("Line          : {}".format(i+1))
-                        print("Original text : {}".format(err.original))
-                        print("Message       : {}".format(err.message))
-                        print()
+                usual_read(f)

@@ -4,8 +4,22 @@
 
 ## Usage
 
-```
+```bash
   python check.py -i [Input File] -t po
+```
+
+### Docker Image & Docker Compose
+
+#### Build
+
+```bash
+docker-compose build
+```
+
+#### Running
+
+```bash
+docker-compose run console python check.py -i example/id.po -t po
 ```
 
 ## Forked from
