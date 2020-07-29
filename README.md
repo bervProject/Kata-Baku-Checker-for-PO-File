@@ -30,7 +30,7 @@ docker-compose run console python check.py -i example/id.po -t po
 
 ## Forked from
 
-https://github.com/turfaa/IndonesianKataBakuChecker
+This project forked from [Indonesian Kata Baku Checkr](https://github.com/turfaa/IndonesianKataBakuChecker)
 
 ## Data Example Source
 
@@ -38,7 +38,7 @@ From Geany Repository.
 
 ## LICENSE
 
-```
+```markdown
 MIT License
 
 Copyright (c) 2018 Bervianto Leo Pratama

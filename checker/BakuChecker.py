@@ -4,13 +4,13 @@ from checker.BaseChecker import *
 
 
 class BakuChecker(BaseChecker):
-    def __init__(self, dict=None):
+    def __init__(self, checkerDictPath=None):
         super().__init__("Kata Baku Checker")
-        self.dict = []
+        self.checkerDict = []
         self.prepared = False
 
-        if (dict != None):
-            self.prepareDict(dict)
+        if (checkerDictPath != None):
+            self.prepareDict(checkerDictPath)
 
     def prepareDict(self, path):
         if (not(os.path.exists(path))):
@@ -22,8 +22,8 @@ class BakuChecker(BaseChecker):
             element[0] = element[0].strip().lower()
             element[1] = element[1].strip().lower()
 
-            if (not(element in self.dict)):
-                self.dict.append(element)
+            if (not(element in self.checkerDict)):
+                self.checkerDict.append(element)
 
         self.prepared = True
 
@@ -54,7 +54,7 @@ class BakuChecker(BaseChecker):
 
         textLower = text.lower()
 
-        for element in self.dict:
+        for element in self.checkerDict:
             i = 0
 
             while(textLower.find(element[1], i) != -1):
