@@ -1,8 +1,10 @@
-from checker.BaseChecker import *
 import os.path
 
+from checker.BaseChecker import *
+
+
 class BakuChecker(BaseChecker):
-    def __init__(self, dict = None):
+    def __init__(self, dict=None):
         super().__init__("Kata Baku Checker")
         self.dict = []
         self.prepared = False
@@ -25,11 +27,11 @@ class BakuChecker(BaseChecker):
 
         self.prepared = True
 
-    def slice(self, text, start, length, helperLength = 20):
+    def slice(self, text, start, length, helperLength=20):
         ret = ""
         ed = ""
 
-        if (start>helperLength):
+        if (start > helperLength):
             ret += "..."
             st = start-helperLength
         else:
@@ -55,9 +57,10 @@ class BakuChecker(BaseChecker):
         for element in self.dict:
             i = 0
 
-            while(textLower.find(element[1], i)!=-1):
+            while(textLower.find(element[1], i) != -1):
                 i = textLower.find(element[1], i)
-                errList.append(ErrorMessage(self, self.slice(text, i, len(element[1])), "The correct word for '{}' is '{}'".format(element[1], element[0])))
+                errList.append(ErrorMessage(self, self.slice(text, i, len(
+                    element[1])), "The correct word for '{}' is '{}'".format(element[1], element[0])))
 
                 i += len(element[1])
 

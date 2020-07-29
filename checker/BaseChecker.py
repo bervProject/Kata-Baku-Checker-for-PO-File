@@ -1,6 +1,6 @@
 class BaseChecker:
     def __init__(self, desc):
-        self.checkerDescription = desc;
+        self.checkerDescription = desc
 
     def check(self, text):
         print("Method 'check' not implemented")

@@ -2,6 +2,12 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/209d0abd94964e0380c2ed897acd052d)](https://app.codacy.com/app/berviantoleo/Kata-Baku-Checker-for-PO-File?utm_source=github.com&utm_medium=referral&utm_content=berviantoleo/Kata-Baku-Checker-for-PO-File&utm_campaign=Badge_Grade_Settings)
 
+## Build Status
+
+| Github Action |
+|:-------------:|
+| |![Docker](https://github.com/bervProject/Kata-Baku-Checker-for-PO-File/workflows/Docker/badge.svg) |
+
 ## Usage
 
 ```bash
@@ -25,6 +31,10 @@ docker-compose run console python check.py -i example/id.po -t po
 ## Forked from
 
 https://github.com/turfaa/IndonesianKataBakuChecker
+
+## Data Example Source
+
+From Geany Repository.
 
 ## LICENSE
 
