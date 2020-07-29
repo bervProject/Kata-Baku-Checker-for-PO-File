@@ -4,9 +4,9 @@
 
 ## Build Status
 
-| Github Action |
-|:-------------:|
-| |![Docker](https://github.com/bervProject/Kata-Baku-Checker-for-PO-File/workflows/Docker/badge.svg) |
+| Travis | Github Action - Docker | Python Package |
+|:------:|:----------------------:|:--------------:|
+| [![Build Status](https://travis-ci.com/bervProject/Kata-Baku-Checker-for-PO-File.svg?branch=master)](https://travis-ci.com/bervProject/Kata-Baku-Checker-for-PO-File) | ![Docker](https://github.com/bervProject/Kata-Baku-Checker-for-PO-File/workflows/Docker/badge.svg) | ![Upload Python Package](https://github.com/bervProject/Kata-Baku-Checker-for-PO-File/workflows/Upload%20Python%20Package/badge.svg) |
 
 ## Usage
 
