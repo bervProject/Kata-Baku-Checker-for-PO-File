@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="kata-baku-checkr-po-file",
-    version="0.0.1",
+    version="0.1.0",
     author="Bervianto Leo Pratama",
     author_email="bervianto.leo@gmail.com",
     description="Checker for Kata Baku for PO File reader",
