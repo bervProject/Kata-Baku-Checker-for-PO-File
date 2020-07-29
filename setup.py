@@ -15,6 +15,9 @@ setuptools.setup(
     long_description_content_type='text/markdown',
     url="https://github.com/bervProject/Kata-Baku-Checker-for-PO-File/",
     packages=setuptools.find_packages(),
+    install_requires=[
+        'polib',
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
