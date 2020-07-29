@@ -7,7 +7,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setuptools.setup(
     name="kata-baku-checkr-po-file",
-    version="0.1.1",
+    version="0.1.2",
     author="Bervianto Leo Pratama",
     author_email="bervianto.leo@gmail.com",
     description="Checker for Kata Baku for PO File reader",
