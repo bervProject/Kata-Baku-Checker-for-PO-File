@@ -14,3 +14,17 @@ updates:
     time: "08:00"
     timezone: Asia/Jakarta
   open-pull-requests-limit: 100
+- package-ecosystem: docker
+  directory: "/"
+  schedule:
+    interval: monthly
+    time: "08:00"
+    timezone: Asia/Jakarta
+  open-pull-requests-limit: 100
+- package-ecosystem: docker-compose
+  directory: "/"
+  schedule:
+    interval: monthly
+    time: "08:00"
+    timezone: Asia/Jakarta
+  open-pull-requests-limit: 100
